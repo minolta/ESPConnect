@@ -1,0 +1,21 @@
+{
+    "name": "Connect",
+    "version": "1.0.1",
+    "description": "for connect wifi",
+    "keywords": "wifi,esp8266,esp32",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/minolta/ESPConnect.git"
+    },
+    "authors": [{
+            "name": "Kritchai Phromros",
+            "email": "ky@pixka.me",
+            "url": "https://fb.com/rokkor"
+        }
+
+    ],
+    "license": "MIT",
+    "homepage": "https://www.helloworld.org/",
+    "frameworks": "*",
+    "platforms": "*"
+}
