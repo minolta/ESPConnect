@@ -7,6 +7,17 @@ void ConnectObj::setPassword(String s)
 {
     password = s;
 }
+int ConnectObj::checkwifi()
+{
+    if (Ping.ping(WiFi.gatewayIP()))
+    {
+        Serial.println("Success!!");
+        return true;
+    }
+
+    Serial.println("Error :(");
+    return false;
+}
 void ConnectObj::connect()
 {
     wifiMulti.addAP(ssid.c_str(), password.c_str());

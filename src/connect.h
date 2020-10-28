@@ -1,7 +1,8 @@
 #ifndef CONNECT_H
 #define CONNECT_H
-#include <WiFiMulti.h>
 #include <Arduino.h>
+#include <WiFiMulti.h>
+
 
 class ConnectObj
 {
@@ -14,6 +15,7 @@ public:
     void connect(void);
     void setSSID(String);
     void setPassword(String);
+    int checkwifi();
 };
 
 #endif
