@@ -66,4 +66,4 @@ void ConnectObj::connect()
     }
 }
 
-ConnectObj connect;
+ConnectObj Connect;

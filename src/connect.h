@@ -2,7 +2,7 @@
 #define CONNECT_H
 #include <Arduino.h>
 #include <WiFiMulti.h>
-
+#include <ESP32Ping.h>
 
 class ConnectObj
 {
