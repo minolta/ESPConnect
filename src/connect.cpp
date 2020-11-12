@@ -20,6 +20,7 @@ int ConnectObj::checkwifi()
 }
 void ConnectObj::connect()
 {
+    WiFi.mode(WIFI_STA);
     wifiMulti.addAP(ssid.c_str(), password.c_str());
     int timeout = 0;
     pinMode(2, OUTPUT);
