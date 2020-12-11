@@ -16,6 +16,7 @@ public:
     void setSSID(String);
     void setPassword(String);
     int checkwifi();
+    int checkwifi(const char*);
 };
 
 #endif

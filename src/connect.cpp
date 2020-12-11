@@ -18,6 +18,17 @@ int ConnectObj::checkwifi()
     Serial.println("Error :(");
     return false;
 }
+int ConnectObj::checkwifi(const char *p)
+{
+    if (Ping.ping(p)
+    {
+        Serial.println("Success!!");
+        return true;
+    }
+
+    Serial.println("Error :(");
+    return false;
+}
 void ConnectObj::connect()
 {
     WiFi.mode(WIFI_STA);
