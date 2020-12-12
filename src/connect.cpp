@@ -57,7 +57,7 @@ void ConnectObj::connect()
     {
         Serial.print(".");
         timeout++;
-        if (timeout > 500)
+        if (timeout > 20)
             break;
         delay(500);
     }
