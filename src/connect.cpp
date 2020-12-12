@@ -20,7 +20,7 @@ int ConnectObj::checkwifi()
 }
 int ConnectObj::checkwifi(const char *p)
 {
-    if (Ping.ping(p)
+    if (Ping.ping(p))
     {
         Serial.println("Success!!");
         return true;
