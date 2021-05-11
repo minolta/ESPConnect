@@ -18,6 +18,8 @@ public:
     int checkwifi();
     int checkwifi(const char*);
     boolean connected();
+    boolean apmode(char *ssid,char *password);
+
 };
 
 #endif
