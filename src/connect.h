@@ -10,13 +10,14 @@ private:
     WiFiMulti wifiMulti;
     String ssid;
     String password;
-
+    boolean connectstatus=false;
 public:
     void connect(void);
     void setSSID(String);
     void setPassword(String);
     int checkwifi();
     int checkwifi(const char*);
+    boolean connected();
 };
 
 #endif

@@ -7,6 +7,8 @@ void setup() {
 ct.setSSID("forpi");
 ct.setPassword("04qwerty");
 ct.connect();
+
+
 }
 
 void loop() {
