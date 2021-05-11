@@ -7,6 +7,10 @@ void ConnectObj::setPassword(String s)
 {
     password = s;
 }
+boolean ConnectObj::connected()
+{
+    return connectstatus;
+}
 int ConnectObj::checkwifi()
 {
     if (Ping.ping(WiFi.gatewayIP()))
@@ -31,6 +35,7 @@ int ConnectObj::checkwifi(const char *p)
 }
 void ConnectObj::connect()
 {
+    connectstatus = false;
     WiFi.mode(WIFI_STA);
     wifiMulti.addAP(ssid.c_str(), password.c_str());
     int timeout = 0;
@@ -64,6 +69,7 @@ void ConnectObj::connect()
 
     if (wifiMulti.run() == WL_CONNECTED)
     {
+        connectstatus = true;
         Serial.println("");
         Serial.println("WiFi connected");
         Serial.println("IP address: ");
