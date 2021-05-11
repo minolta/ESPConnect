@@ -33,6 +33,14 @@ int ConnectObj::checkwifi(const char *p)
     Serial.println("Error :(");
     return false;
 }
+boolean ConnectObj::apmode(char *ssid, char *password)
+{
+    WiFi.softAPConfig(IPAddress(192, 168, 5, 1), IPAddress(192, 168, 5, 1), IPAddress(255, 255, 255, 0));
+    WiFi.softAP(ssid, password);
+    IPAddress IP = WiFi.softAPIP();
+    Serial.print("AP IP address: ");
+    Serial.println(IP);
+}
 void ConnectObj::connect()
 {
     connectstatus = false;
