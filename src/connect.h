@@ -19,7 +19,7 @@ public:
     int checkwifi(const char*);
     boolean connected();
     boolean apmode(char *ssid,char *password);
-
+    boolean checkconnection(boolean restart);
 };
 
 #endif

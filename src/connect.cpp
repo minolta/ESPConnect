@@ -95,5 +95,27 @@ void ConnectObj::connect()
         Serial.println(WiFi.RSSI());
     }
 }
+boolean ConnectObj::checkconnection(boolean restart)
+{
+    if (!checkwifi())
+    {
+        WiFi.disconnect();
+        delay(1000);
+        WiFi.reconnect();
 
+        int tryconnect = 0;
+
+        while (WiFi.status() != WL_CONNECTED)
+        {
+            delay(200);
+            tryconnect++;
+
+            if (tryconnect > 20)
+            {
+                if(restart)
+                ESP.restart();
+            }
+        }
+    }
+}
 ConnectObj Connect;
